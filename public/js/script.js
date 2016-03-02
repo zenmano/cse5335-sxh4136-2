@@ -153,6 +153,7 @@ $(document).ready(function(){
 		});
 	
 	$("#clickme").click(function(){
+		var clickme = $(this);
 		$.get("/cool", function(datafromnodejs, status){
 	        data = datafromnodejs;
 	        
@@ -162,7 +163,10 @@ $(document).ready(function(){
 	    	$(".outlook_listitem").eq(0).addClass("selected");
 	    	createmap(firstcomp);
 	    	createchart(firstcomp);
-	    	
+	    	if(status=="success"){
+	    		clickme.hide();
+	    		$(".body_content").show();
+	    	}
 	    });
 	});
 	

@@ -1,0 +1,42 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.header {
+    height: 50px;
+}
+
+.left_side {
+    float: left;
+    width: 300px;
+}
+
+.outlook_listitem {
+    padding: 10px 20px;
+    height: 60px;
+}
+
+.outlook_list {
+    border: 1px solid lightgrey;
+}
+
+.outlook_listitem_name {
+    font-size: 24px;
+}
+
+.outlook_listitem.selected {
+    background-color: #C7E0F4;
+}
+
+.right_side {
+    float: left;
+    /* width: 700px; */
+    /* margin-left: 300px; */
+    display: inline-block;
+}
+#map{
+	margin:20px;
+}

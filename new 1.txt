@@ -1,15 +1,11 @@
-Project 1- CSE5335
-==================
+    Project 1- CSE5335
+	==================
 	
-Name: Supreme Halagur Chandrashekarappa	
-=========================================
-netid: sxh4136	
-=========================================
-Student id: 1001244135
-=========================================
+	Name: Supreme Halagur Chandrashekarappa		netid: sxh4136		Student id: 1001244135
+	=======================================================================================
 	
-URL: https://cse5335-sxh4136.herokuapp.com/
------------------------------------------------------
+	URL: https://cse5335-sxh4136.herokuapp.com/
+	-----------------------------------------------------
 
     
 a. What server framework did you choose and why?

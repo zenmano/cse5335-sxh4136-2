@@ -15,34 +15,73 @@ header {
     height: 50px;
 }
 
-.left_side {
+
+.tile {
     float: left;
-    width: 300px;
+    /* width: 100px; */
+    /* height: 100px; */
+    margin: 0 10px 10px 0;
+    /* padding: 20px 20px 20px; */
+    border-radius: 5px;
+    text-align: center;
+    /* background-color: #d8d8d8; */
 }
 
-.outlook_listitem {
-    padding: 10px 20px;
-    height: 60px;
+
+.flip-container {
+	perspective: 1000;
+    
+}
+	/* flip the pane when hovered */
+	 .flip-container.showloading .flipper {
+		transform: rotateY(180deg);
+        
+	}
+
+.flip-container, .front, .back {
+	width: 300px;
+	height: 150px;
 }
 
-.outlook_list {
-    border: 1px solid lightgrey;
+/* flip speed goes here */
+.flipper {
+	
+	transform-style: preserve-3d;
+    transition: 1s;
+	position: relative;
 }
 
-.outlook_listitem_name {
-    font-size: 24px;
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.outlook_listitem.selected {
-    background-color: #C7E0F4;
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+	background-color: lightgrey;
+	padding-top: 20px;
 }
 
-.right_side {
-    float: left;
-    /* width: 700px; */
-    /* margin-left: 300px; */
-    display: inline-block;
+.front span {
+    display: block;
+    line-height: 20px;
 }
-#map{
-	margin:20px;
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+	background-color: rgba(211, 211, 211, 0.43);
 }
+
+
+.back-title img {
+    margin-top: 25px;
+}
+

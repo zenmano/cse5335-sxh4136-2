@@ -1,4 +1,4 @@
-Project 1- CSE5335
+Project 2- CSE5335
 ==================
 	
 Name: Supreme Halagur Chandrashekarappa	
@@ -8,82 +8,27 @@ netid: sxh4136
 Student id: 1001244135
 =========================================
 	
-URL: https://cse5335-sxh4136.herokuapp.com/
+URL: https://cse5335-sxh4136-2.herokuapp.com/
 -----------------------------------------------------
 
-    
-a. What server framework did you choose and why?
-=======================================================================
+ 
 
-I have used NodeJS as a Server Framework. I have used NodeJS for following reasons:
-* NodeJS is a perfect technology for Single Page Applications. 
-* The event loop in NodeJS is a single thread that performs all I/O operations asynchronously.
-* Trending Serverside Framework with more job opportunities
-* The requirement of the project was to send JSON from server side, as NodeJS is javascript framework.
-* I had a professional experience on javascript for 2 years.
-* Platform, open-source, its community is a huge influencing factor.
-
---------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-b. What client framework did you choose and why?
-=======================================================================
-I have used Jquery as a Client Framework. I chose because of following reasons:
-*I have professional experience in web development.
-*Jquery is my most favourite Framework of all others when compared to AngularJS or others.
-*Jquery is most used by all developers and is there from long time.
-*It is a Open Source frameworks that have large, active development communities and are being used at many of the most progressive webbased companies around the world.
-*Very easy to make AJAX calls.
-*Ease of use
-*Great documentation and tutorials
-*Features such as Triggering and listening for events, selecting elements from the DOM and traversing the DOM.
-
---------------------------------------------------------------------------------------------------------------------------------------
-
-
-c. What aspect of the implementation did you find easy, if any, and why?
+a. What aspect of the implementation did you find easy, if any, and why?
 =======================================================================
 The First and foremost which made very easy was the use of Heroku. As PAAS it really has a awesome and easy to use, deploy and run. The easy way of pushing the code to git and deploy. The Heroku Toolbelt has easy to use commands. The tutorial made it very easy to use Heroku. As I was comfortable with Javascript it was easy for me to use Jquery and NodeJS.
+The data type structure of REDIS made it very easy for retrieving the data. I stored the stringified JSON of each data in REDIS. The insertion and retrieval was very easy. There was no need for me to change the JSON datatype again. Whatever stored in database was directly sent to User Interface without any change in format of data.
 
 --------------------------------------------------------------------------------------------------------------------------------------
 
-d. What aspect of the implementation did you find hard, if any, and why?
+b. What aspect of the implementation did you find hard, if any, and why?
 =======================================================================
-I did not find any of the implementations as hard. I was quite stuck with the Google Maps API due to the version mismatch with the code. I had multiple markers that had to be displayed in a single map, the problem was that it auto zoomed only to one of the marker. I had to import Highcharts for charts and Google Maps API for map, Took some time to display the charts on each click.
-
+I took up the flipping of tiles for animating the newly arriving data. The implementation was kind of hard. It was not just a css but included Jquery too. I had to insert and remove class to respected tile for showing loading image, flipping and show the binded data to tile. I also faced difficulties in data retrieval in specified interval.
 --------------------------------------------------------------------------------------------------------------------------------------
 
-e. What components OTHER than your client and server framework did you install, if any, and if so, what is their purpose for your solution?
-===========================================================================================================================================
-*I have installed Heroku Toolbelt provides me access to the Heroku Command Line Interface (CLI), which can be used for managing and scaling my applications.
-*npm(Nodejs Package Manger) for Nodejs do install libraries. The Express package was not installed and had given a error that express is not found. So had to install npm to Install packages.
-
---------------------------------------------------------------------------------------------------------------------------------------
-
-f. What Ubuntu commands are required to deploy and run your server?
+c. If you were to use these technologies professionally, what would be your biggest concern?
 =======================================================================
-1.	Heroku Login
-Authenticating is required to allow both the heroku and git commands to operate.
+1. NodeJS is really a nice way of asynchronous programming. The CallBack Function way of handling looks clean. But as in professional as the projects is gonna be complex and it involves multiple calls. The anonymous callback function can go numerous nesting. The other Synchronous programming style server side languages seems more clean and easy way of coding. 
 
-2.	git clone https://github.com/heroku/node-js-getting-started.git
-clone the sample application
+2. REDIS is fast, but storing huge data in-memory will end up in high cost.
 
-3.  cd node-js-getting-started
-use the sample application
-
-4.  heroku create  
-Create an app on Heroku, which prepares Heroku to receive your source code.
-
-5.	git push heroku master 
-deploying the code
-
-6.	heroku local web
-To run locally in heroku environment
-
-7.	git add .
-add the modified files to the local git repository
-
-8.	heroku apps:rename my_new_app_name  
-Renaming the Default app name
-
+3. In Professional world the data is huge, complex and relational. REDIS is only good if you want to query based on single key. But if you want to query based on other attributes of the record then REDIS does not support the requirements. SQL is better in that case.

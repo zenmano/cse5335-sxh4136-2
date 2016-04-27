@@ -23,6 +23,7 @@ The data type structure of REDIS made it very easy for retrieving the data. I st
 b. What aspect of the implementation did you find hard, if any, and why?
 =======================================================================
 I took up the flipping of tiles for animating the newly arriving data. The implementation was kind of hard. It was not just a css but included Jquery too. I had to insert and remove class to respected tile for showing loading image, flipping and show the binded data to tile. I also faced difficulties in data retrieval in specified interval.
+
 --------------------------------------------------------------------------------------------------------------------------------------
 
 c. If you were to use these technologies professionally, what would be your biggest concern?
